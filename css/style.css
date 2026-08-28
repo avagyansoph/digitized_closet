@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  height: 100vh;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.left {
+  position: relative;
+  /*positioned parent */
+  overflow: hidden;
+
+}
+
+.pant {
+  height: 100px;
+  width: 100px;
+  top: 75%;
+
+}
+
+.shit {
+  height: 100px;
+  width: 100px;
+  bottom: 25%;
+}
+
+.shit,
+.pant {
+  width: 250px;
+  height: 250px;
+
+}
+
+.draggable {
+  position: absolute;
+  cursor: grab;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*on an absolutely positioned element are calculated relative to the nearest positioned ancestor*/
+
+}
+
+.scroll-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*--------------------------------------------------- KILL SCROLL */
+.scroll-box {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.pantpair,
+.shirtpair {
+  display: flex;
+  justify-content: center;
+}
+
+.pantbox,
+.shirtbox {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  margin: 10px
+}
+
+.pantbox:hover,
+.shirtbox:hover {
+  width: 150px;
+  height: 150px;
+}
